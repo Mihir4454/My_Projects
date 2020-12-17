@@ -1,0 +1,70 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% load widget_tweaks %}
+
+<div style='background-color: rgb(97, 104, 104); height:700px'>
+    <div class="container-fluid  " >
+        <div class="row">
+            <div class="col-sm "></div>
+            <div class="col-sm bg-dark text-white mt-5 mb-5 rounded border border-dark shadow-lg " >
+                <h1 class='text-center'>Register Here</h1>
+                <div >
+                    {% if user_form.errors %}
+                        {% for field in user_form %}
+                            {% for error in field.errors %}
+                                <div class="alert alert-danger alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>{{ error }}</strong>
+                                </div>
+                            {% endfor %}
+                            {% endfor %}
+                    {% for error in user_form.non_field_errors %}
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>{{ error }}</strong>
+                      </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <form  method="POST" >
+                    {% csrf_token %}
+                <div class="form-group">
+                    <label>{{user_form.first_name.label}}</label>
+                    {% render_field user_form.first_name class="form-control"%}
+
+                    <label>{{user_form.last_name.label}}</label>
+                    {% render_field user_form.last_name class="form-control"%}
+
+                    <label>{{user_form.email.label}}</label>
+                    {% render_field user_form.email class="form-control"%}
+
+
+                    <label>{{user_form.username.label}}</label>
+                    {% render_field user_form.username class="form-control"%}
+                    
+                    <label>{{user_form.password1.label}}</label>
+                    {% render_field user_form.password1 class="form-control"%}
+                   
+
+
+                    <label>{{user_form.password2.label}}</label>
+                    {% render_field user_form.password2 class="form-control"%}
+                    
+                    <div class='my-3 d-flex justify-content-center'> 
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+                    </div>
+
+                    
+                </div>
+            </form>
+            
+            </div>
+            <div class="col-sm"></div>
+          </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

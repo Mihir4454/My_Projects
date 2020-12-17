@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div style='background-color: rgb(97, 104, 104); height:517px'>
+    <div class=" container pt-5">
+
+        <div class='bg-dark text-white'>
+            <h1>My Blog</h1>
+
+            {% for i in posts %}
+            <h2>{{ i.tital }}</h2>
+            <p>{{ i.content }}</p>
+            <p>By {{ i.auther }} on {{ i.date_time }}</p>
+
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

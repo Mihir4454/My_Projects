@@ -1,0 +1,67 @@
+{% extends 'blog/base.html' %}
+
+{% block content %} 
+{% load widget_tweaks %}
+
+
+<div style='background-color: rgb(97, 104, 104); height:800px;'>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img src="{{user.profile.profile_picture.url}}" class='img-fluid img-thumbnail  w-50'>
+      </div>
+      <div class="col-sm text-white">
+        <h2>Hi, {{ user.first_name }}  {{ user.last_name }}</h2>
+      </div>
+      <div class="col-sm">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+          <div><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Update form</button>
+        <form  method="POST" id="demo" >
+            {% csrf_token %}
+        <div class="form-group text-white">
+            <label>{{p_form.first_name.label}}</label>
+            {% render_field p_form.first_name class="form-control"%}
+        
+            <label>{{p_form.last_name.label}}</label>
+            {% render_field p_form.last_name class="form-control"%}
+        
+            <label>{{p_form.email.label}}</label>
+            {% render_field p_form.email class="form-control"%}
+        
+        
+            <label>{{p_form.username.label}}</label>
+            {% render_field p_form.username class="form-control"%}
+            
+            
+            <div class='my-3 d-flex justify-content-center '> 
+            <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+        
+            
+        </div>
+        </form>
+    </div>
+      </div>
+      <div class="col-sm">
+        
+      </div>
+      <div class="col-sm">
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
