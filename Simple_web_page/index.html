@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihir's Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+
+        .left {
+            display: inline-block;
+            border: 5px solid rgb(207, 142, 74);
+            position: absolute;
+            left: 34px;
+            top: 20px;
+            border-radius: 30px;
+            padding: 10px;
+            background-color: rgb(8, 8, 8);
+        }
+
+
+        .mid {
+            display: block;
+            margin: 50px auto;
+            width: 38%;
+        }
+
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 34px;
+            top: 20px;
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        .navbar li a {
+            color: rgb(207, 142, 74);
+            text-decoration: none;
+            padding: 30px 15px;
+        }
+
+        .navbar li a.active:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .left img {
+            width: 150px;
+            height: 150px;
+            filter: invert(100%);
+            background-attachment: fixed;
+        }
+
+        .left div {
+            text-align: center;
+            color: rgb(207, 142, 74);
+            font-family: 'Indie Flower', cursive;
+            font-size: 23px;
+            line-height: 40px;
+        }
+
+        .btn {
+            margin: 0px;
+            background-color: rgb(207, 142, 74);
+            color: white;
+            padding: 8px 20px;
+            border: solid 2px black;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .container {
+            color: white;
+            border: 2px solid rgb(207, 142, 74);
+            margin: 180px 34px;
+            padding: 75px;
+            border-radius: 10px;
+            width: 33%;
+        }
+
+        .form-group input {
+            text-align: center;
+            display: inline-block;
+            width: 350px;
+            padding: 1px;
+            margin: auto;
+            font-size: 20px;
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            float: right;
+
+        }
+
+        .container h2 {
+            text-align: center;
+            color: rgb(207, 142, 74);
+        }
+
+        .container button {
+            margin: 20px auto;
+            display: block;
+            width: 40%;
+        }
+
+        .form-group p {
+            color: rgb(207, 142, 74);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="right">
+            <button class="btn">Call us</button>
+            <button class="btn">Email us</button>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li> <a href="#" class="active">Home</a> </li>
+                <li> <a href="#" class="active">About</a> </li>
+                <li> <a href="#" class="active">Fitness</a> </li>
+                <li> <a href="#" class="active">Contact us</a> </li>
+            </ul>
+        </div>
+        <div class="left">
+            <img src="img/logo.png" alt="">
+            <div>Mihir's Fitness</div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Join Chaki bhai's Best gym here</h2>
+        <form action="noaction.php">
+            <div class="form-group">
+                <p>Name:</p><input type="text" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <p>Age:</p> <input type="text" placeholder="Enter Your Age">
+            </div>
+            <div class="form-group">
+                <p>Gender:</p> <input type="text" placeholder="Enter Your Gender">
+            </div>
+            <div class="form-group">
+                <p>Locality:</p> <input type="text" placeholder="Enter Your Locality">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
